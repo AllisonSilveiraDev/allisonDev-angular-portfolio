@@ -1,0 +1,13 @@
+<div class="flag-button">
+    <button *ngIf="!isLanguageSelected('en')" (click)="switchLanguage('en')">
+        <img
+            src="../../../assets/languageFlags/united-states.png"
+            alt="US-flag"
+        />
+    </button>
+</div>
+<div class="flag-button">
+    <button *ngIf="!isLanguageSelected('pt')" (click)="switchLanguage('pt')">
+        <img src="../../../assets/languageFlags/brazil.png" alt="Brazil" />
+    </button>
+</div>

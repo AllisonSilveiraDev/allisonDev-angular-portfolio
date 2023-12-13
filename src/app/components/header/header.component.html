@@ -1,0 +1,16 @@
+<div class="header">
+    <div class="logo">AllisoDev</div>
+    <div class="nav-menu">
+        <ul>
+            <li>{{ "header.About" | translate }}</li>
+            <li>{{ "header.Portfolio" | translate }}</li>
+            <li>{{ "header.Skills" | translate }}</li>
+            <li>{{ "header.Contacts" | translate }}</li>
+        </ul>
+    </div>
+    <div class="header-actions">
+        <app-language-selector
+            (languageSelected)="switchLanguage($event)"
+        ></app-language-selector>
+    </div>
+</div>

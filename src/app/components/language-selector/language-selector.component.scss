@@ -1,0 +1,14 @@
+.flag-button {
+    button {
+        cursor: pointer;
+        border: none;
+        img {
+            height: 26px;
+            transition: transform 0.7s, box-shadow 0.3s;
+        }
+        img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    }
+}

@@ -1,14 +1,21 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { LanguageService } from './services/language-translation.service';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'allisonDev-portfolio';
+export class AppComponent implements OnInit {
+    constructor(private languageService: LanguageService) {}
+
+    ngOnInit() {
+        this.languageService.setLanguage('pt');
+    }
+
+    switchLanguage(language: string) {
+        this.languageService.setLanguage(language);
+    }
+
+    title = 'allisonDev-portfolio';
 }

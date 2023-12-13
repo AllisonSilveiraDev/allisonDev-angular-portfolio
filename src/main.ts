@@ -1,6 +1,9 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { platformBrowser } from '@angular/platform-browser';
+import { AppModule } from './app/app.module';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+platformBrowser()
+    .bootstrapModule(AppModule)
+    .then((moduleRef) => {
+        // Aqui você pode fazer algo após a inicialização do módulo, se necessário.
+    })
+    .catch((err) => console.error(err));
