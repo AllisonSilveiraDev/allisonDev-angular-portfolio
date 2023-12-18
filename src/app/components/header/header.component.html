@@ -1,5 +1,5 @@
 <div class="header">
-    <div class="logo">AllisoDev</div>
+    <div class="logo">AllisonDev</div>
     <div class="nav-menu">
         <ul>
             <li>{{ "header.About" | translate }}</li>
@@ -9,6 +9,7 @@
         </ul>
     </div>
     <div class="header-actions">
+        <app-theme-switch-button></app-theme-switch-button>
         <app-language-selector
             (languageSelected)="switchLanguage($event)"
         ></app-language-selector>

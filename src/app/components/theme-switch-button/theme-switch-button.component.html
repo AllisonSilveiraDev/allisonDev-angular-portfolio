@@ -1,0 +1,12 @@
+<div class="switch-container">
+    <img src="../../../assets/switchIcons/sun.png" alt="sun" />
+    <label class="switch">
+        <input
+            type="checkbox"
+            (change)="toggleTheme()"
+            [checked]="isDarkTheme()"
+        />
+        <span class="slider"></span>
+    </label>
+    <img src="../../../assets/switchIcons/moon.png" alt="moon" />
+</div>
